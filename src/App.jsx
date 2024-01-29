@@ -1,6 +1,8 @@
 
 import './App.css'
-import UseReduce from './useReduce'
+// import UseMemo from './useMemo'
+import UseRef from './UseRef'
+// import UseReduce from './useReduce'
 // import Calculator from './InputCalculator'
 // import Sample from './Sample'
 // import Calculator from './Calculator'
@@ -12,9 +14,9 @@ import UseReduce from './useReduce'
 
 function App() {
   return (
-    
-    <UseReduce/>
-    
+      
+    <UseRef/>
+
   )
 }
 
