@@ -1,16 +1,15 @@
-import { useState, createContext } from "react";
+import { createContext, useState } from "react";
 
-export const MyContext = createContext();
+export const MyContext = createContext()
 
 export const MyContextProvider = ({children})=>{
-    const [value, setValue] = useState('This is my context')
-    
-    return (
-      <MyContext.Provider value={{ value, setValue }}>
-        {children}
-      </MyContext.Provider>
-    );
-}
+  const [value, setValue] = useState('This is my context')
 
+  return (
+    <MyContext.Provider value={{value, setValue}}>
+        {children}
+    </MyContext.Provider>
+  )
+}
 
 
