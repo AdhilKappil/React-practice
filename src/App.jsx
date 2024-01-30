@@ -1,7 +1,11 @@
 
 import './App.css'
+import { lazy, Suspense } from 'react'
+const ParanetComponent = lazy(()=> import('./ParanetComponent')) 
+// import MyProps from './Myprops'
+// import PropsProxy from './PropsProxy'
 // import UseMemo from './useMemo'
-import UseRef from './UseRef'
+// import UseRef from './UseRef'
 // import UseReduce from './useReduce'
 // import Calculator from './InputCalculator'
 // import Sample from './Sample'
@@ -12,10 +16,16 @@ import UseRef from './UseRef'
 // import Person from './Person'
 // import Button from'./Button'
 
+// const FirstComponent = PropsProxy(MyProps)
+
 function App() {
   return (
-      
-    <UseRef/>
+  <>
+     <Suspense fallback={<div>loading...</div>}>
+      <ParanetComponent />
+     </Suspense>
+     {/* <FirstComponent degree='BCOM'/> */}
+  </>
 
   )
 }
