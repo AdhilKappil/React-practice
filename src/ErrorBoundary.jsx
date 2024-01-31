@@ -1,25 +1,20 @@
-
 import { useEffect, useState } from "react"
 
-
-function ErrorBoundary({children}) {
-
+function Erroboundery ({children}){
     const [findError, setfindError] = useState(false)
-
+    
     useEffect(()=>{
-        const errorHandle = ((error)=>{
-            console.log('error found',error);
+        const erroHandler = ((error)=>{
+            console.log('error spoted',error);
             setfindError(true)
         })
-    },[])
-    
+    },[findError])
 
     if(findError){
-        return <div>Somthing whent to wrong please try later</div>
+        return <div>Somthing whent to wrong</div>
     }else{
         return children
     }
-
 }
 
-export default ErrorBoundary
+export default Erroboundery

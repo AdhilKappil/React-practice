@@ -1,12 +1,16 @@
 
+// import { Suspense, lazy } from 'react'
 import './App.css'
-import { MyContextProvider } from './Context'
-// import { lazy, Suspense } from 'react'
-// import ErrorBoundary from './ErrorBoundary'
-// const ParanetComponent = lazy(()=> import('./ParanetComponent')) 
+import ParantReactMemo from './Parant-react-memo'
+// const UseMemo = lazy(()=>import('./useMemo')) 
+// import Erroboundery from './ErrorBoundary'
 // import MyProps from './Myprops'
 // import PropsProxy from './PropsProxy'
-import UseMemo from './useMemo'
+// import { MyContextProvider } from './Context'
+// import { lazy, Suspense } from 'react'
+// import ErrorBoundary from './ErrorBoundary'
+// import MyProps from './Myprops'
+// import PropsProxy from './PropsProxy'
 // import UseRef from './UseRef'
 // import UseReduce from './useReduce'
 // import Calculator from './InputCalculator'
@@ -20,20 +24,19 @@ import UseMemo from './useMemo'
 
 // const FirstComponent = PropsProxy(MyProps)
 
+
 function App() {
   return (
-  <>
-  <MyContextProvider>
-       <UseMemo/>
-  </MyContextProvider>
-  {/* <ErrorBoundary>
-     <Suspense fallback={<div>loading...</div>}>
-      <ParanetComponent />
-     </Suspense>
-     <FirstComponent degree='BCOM'/>
-  </ErrorBoundary> */}
 
-  </>
+    <>
+
+     <ParantReactMemo/>
+
+    {/* <Suspense fallback={<div>Loading...</div>}> 
+     <UseMemo/>
+    </Suspense> */}
+
+    </>
 
   )
 }
